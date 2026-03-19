@@ -8,4 +8,9 @@ cask "reeve" do
   homepage "https://github.com/fredrivett/reeve"
 
   app "Reeve.app"
+
+  postflight do
+    system_command "/usr/bin/xattr",
+      args: ["-c", "#{appdir}/reeve.app"]
+  end
 end
