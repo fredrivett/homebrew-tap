@@ -1,6 +1,6 @@
 cask "reeve" do
-  version "0.1.11"
-  sha256 "11852026ec331c0b644b4cc5a91340ccb9314b632c9405007a4085b6327f601f"
+  version "0.1.12"
+  sha256 "d8d4a779a1eec192d7494a2b776f96af1c702279fae6aed651e3e5d575495ddb"
 
   url "https://github.com/fredrivett/reeve/releases/download/v#{version}/Reeve-#{version}.dmg"
   name "reeve"
