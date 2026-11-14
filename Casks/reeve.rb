@@ -1,6 +1,6 @@
 cask "reeve" do
-  version "0.1.12"
-  sha256 "d8d4a779a1eec192d7494a2b776f96af1c702279fae6aed651e3e5d575495ddb"
+  version "0.1.13"
+  sha256 "22741879ac49bae979af17e0e01b99b63ae249149ba65753c2943f54fb09ccae"
 
   url "https://github.com/fredrivett/reeve/releases/download/v#{version}/Reeve-#{version}.dmg"
   name "reeve"
@@ -9,8 +9,7 @@ cask "reeve" do
 
   app "Reeve.app"
 
-  postflight do
-    system_command "/usr/bin/xattr",
-      args: ["-c", "#{appdir}/Reeve.app"]
+  postflight_steps do
+    run "/usr/bin/xattr", args: ["-c", "{{appdir}}/Reeve.app"]
   end
 end
